@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#fight > form {
+  margin-bottom: 8px;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 2px 50px;
+}
+
+.card-flip {
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip {
+  transition: 0.6s;
+  position: relative;
+    -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; 
+ }
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+}
+
+
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-flip, .card, .front, .back {
+  width: 100%;
+  max-width: 450px;
+}
+
+.front .card{
+  height: 100%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  margin: 50px auto 50px auto;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-footer {
+  min-height: 12vw;
+}
+
+.front .card-footer img{
+  height: 100%;
+  object-fit: contain;
+}
+
+h2 {
+  margin: 15px auto 5px;
+}
+
+button.close{
+  position: fixed;
+  top: 5px;
+  right: 10px;
+}
+
+img {
+  border-radius: 100px 100px 100px 100px;
+  width: 100%;
+  height: 25vw;
+  object-fit: fill;
+}
+
+table {
+  width: 100%;
+}
+
+tr td {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-td-border-bottom {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #555555;
+  cursor: pointer;
+}
+
+tr:last-child td {
+   border-bottom: none;
+}
+
+td {
+  padding: 3px 15px;
+  text-align: left;
+}
+
+td.td--center-align {
+  text-align: center !important;
+}
+
+td img {
+  height: 2em;
+  width: auto;
+  text-align: center;
+}
+
+#computer-table tr {
+  pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#computer-table tr:hover {
+   background-color: transparent ;
+}
+
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+div.hidden {
+   display: none
+}
+
+
+.outline {
+  border: 1px solid red;
+}
+
+.display-none {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.no-border {
+  border: none;
+}
+
+
+
+/*  Following code only for WithoutPoints Version: */
+
+/* #player-score-message, #conputer-score-message {
+  display: none;
+}
+
+#elongate-this-div {
+  column-width: 100%;
+} */
+
+
+
+/* Following code only for Quotes Version */
+.modal{
+  display:none;
+  position: fixed;
+  z-index:1;
+  left: 0;
+  top:0;
+  height: 100%;
+  width:100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  background-color:#f4f4f4;
+  margin: 10% auto;
+  width:70%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:1s;
+}
+
+.modal-header h2{
+  margin:0 auto;
+}
+
+.modal-header{
+  background:coral;
+  padding:15px;
+  color:#fff;
+}
+
+.modal-body{
+  padding:10px 20px;
+}
+
+.closeBtn{
+  color:#ccc;
+  float: right;
+  font-size:30px;
+  color:#fff;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+@keyframes modalopen{
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+
+
+
+/* For Popup of Success or Failure */
+
+.overlay1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 255, 0, 0.3);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+
+.overlay2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.3);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+
+
+.overlay3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 255, 0.3);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+
+.overlay-be-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-success {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+.popup-success .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+.popup-failure {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+.popup-failure .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+.popup-draw {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+.popup-draw .content {
+  max-height: 30%;
+  overflow: auto;
+}
